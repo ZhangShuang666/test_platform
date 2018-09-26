@@ -16,6 +16,10 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://v3.bootcss.com/examples/signin/signin.css" rel="stylesheet">
 
+      <style>
+        .hse1{ color:red}
+      </style>
+
   </head>
 
   <body>
@@ -28,7 +32,9 @@
         <input type="text" name="username" id="inputEmail" class="form-control" placeholder="username" required>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-          {{error}}
+
+          <p class="hse1">{{error}}</p>
+
           {%csrf_token%}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
