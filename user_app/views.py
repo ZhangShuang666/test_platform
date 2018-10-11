@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import auth
 from django.contrib.auth.decorators import login_required
+from user_app.models import Project
 
 
 def index(request):
@@ -29,7 +30,12 @@ def login_action(request):
 @login_required
 def project_manage(request):
     username = request.session.get('now_user', '')
-    return render(request, 'project_manage.html')
+    All_Project = Project.objects.all()
+    return render(request, 'project_manage.html',
+                   {
+                       "user": username,
+                       "projects": All_Project,       # 传project
+                   })
 
 
 @login_required
