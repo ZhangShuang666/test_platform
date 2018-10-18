@@ -11,8 +11,10 @@ def index(request):
 #  处理登陆请求
 def login_action(request):
     if request.method == "POST":
-        username = request.POST.get("username", "")
-        password = request.POST.get("password", "")
+        #username = request.POST.get("username", "")
+        #password = request.POST.get("password", "")
+        username = request.POST.get("username")
+        password = request.POST.get("password")
 
         if username == "" or password == "":
             return render(request, "index.html", {"error": "用户名或者密码为空"})
