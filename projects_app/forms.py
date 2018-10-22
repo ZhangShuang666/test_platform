@@ -1,7 +1,9 @@
 from django import forms
 from django.forms import ModelForm
+from .models import Project
 
 
-class ProjectForms(forms.Form):
-    name = forms.CharField(label='名称', max_length=100)
-    description = forms.CharField(label='描述', widget=forms.Textarea)
+class ProjectForms(ModelForm):
+    class Meta:
+        model = Project
+        exclude = ['create_time']
