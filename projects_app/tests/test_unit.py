@@ -46,6 +46,8 @@ class ProjectTestCase(TestCase):
         project_edit_html = list_response.content.decode("utf-8")
         self.assertIn("项目修改后的名称", project_edit_html)
         self.assertIn("项目修改后的描述", project_edit_html)
+        self.assertNotIn("测试项目数据", project_edit_html)
+        self.assertNotIn("项目描述", project_edit_html)
 
     def test_project_delete(self):
         """项目删除测试"""
@@ -106,6 +108,8 @@ class ModuleTestCase(TestCase):
         module_edit_html = list_response.content.decode("utf-8")
         self.assertIn("模块修改后的名称", module_edit_html)
         self.assertIn("模块修改后的描述", module_edit_html)
+        self.assertNotIn("模块测试", module_edit_html)
+        self.assertNotIn("模块的描述", module_edit_html)
 
     def test_project_delete(self):
         """模块删除测试"""
