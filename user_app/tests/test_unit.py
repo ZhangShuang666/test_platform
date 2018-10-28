@@ -71,7 +71,7 @@ class LoginActionTestCase(TestCase):
         self.assertIn("用户名或者密码错误", html)
 
     def test_Login_Sucess(self):
-        """用户名或者密码错误"""
+        """登陆成功"""
         Sucess_data = {
             "username": "test01",
             "password": "password01"
