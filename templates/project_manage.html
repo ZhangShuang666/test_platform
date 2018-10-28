@@ -29,7 +29,7 @@
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="/manage/project_manage/">项目管理</a></li>
-                    <li><a href="/manage/module_manage/">模块管理</a></li>
+                    <li><a href="/manage/module_manage/" id="module_manage">模块管理</a></li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li><a href="">用例管理</a></li>
@@ -48,7 +48,7 @@
                     style=body {
                       padding: 50px
                       }
-                    onclick="window.location.href='/manage/project_add/'">创建</button>
+                    onclick="window.location.href='/manage/project_add/'" id="Create">创建</button>
           </h2>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -89,7 +89,7 @@
               <form action="/manage/project_add/" method="post">
                   {% csrf_token %}
                   {{ form.as_p }}
-                <input type="submit" value="创建">
+                <input type="submit" id="cerate_project" value="创建">
                   <button class="btn btn-default"
                             onclick="window.location.href='/manage/project_manage/'"
                             style="...;">取消
@@ -103,7 +103,7 @@
               <form role="form" method="post">
                   {% csrf_token %}
                   {{ form.as_p }}
-                <input type="submit" value="保存">
+                <input type="submit" id="edit_project" value="保存">
                   <button class="btn btn-default"
                             onclick="window.location.href='/manage/project_manage/'"
                             style="...;">取消
