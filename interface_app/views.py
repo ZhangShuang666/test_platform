@@ -26,13 +26,14 @@ def api_debug(request):
         url = request.POST.get("req_url")
         method = request.POST.get("req_method")
         parameter = request.POST.get("req_parameter")
+        header = request.POST.get("header")
 
         payload = json.loads(parameter.replace("'", "\""))
 
         if method == "get":
-            r = requests.get(url, params=payload)
+            r = requests.get(url, params=payload, headers=header)
 
         if method == "post":
-            r = requests.post(url, data=payload)
+            r = requests.post(url, data=payload, headers=header)
 
         return HttpResponse(r.text)
