@@ -24,5 +24,6 @@ urlpatterns = [
     path('accounts/login/', views.index),
     path('login_action/', views.login_action),
     path('manage/', include('projects_app.urls')),
-    path('logout/', views.logout)
+    path('logout/', views.logout),
+    path('interface/', include('interface_app.urls')),
 ]
