@@ -3,16 +3,22 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 import json
 import requests
+from interface_app.models import TestCase
+from interface_app.forms import TestCaseForms
 
 
 @login_required
 def case_manage(request):
+    testcase = TestCase.objects.all()
+    print(testcase)
     return render(request, 'case_manage.html',{
-        "type": "list"
+        "type": "list",
+        "testcase": testcase
     })
 
 @login_required
 def debug(request):
+
     if request.method == "GET":
         return render(request, "api_debug.html", {
             "type": "debug"
