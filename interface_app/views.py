@@ -34,19 +34,24 @@ def case_manage(request):
 
 
 @login_required
-# 创建/调试接口
-def debug(request):
+# 创建接口
+def case_add(request):
     if request.method == "GET":
         form = TestCaseForms()
-        return render(request, "api_debug.html", {
+        return render(request, "case_add.html", {
             "form": form,
-            "type": "debug"
+            "type": "add"
         })
     else:
         return HttpResponse("404")
 
 @login_required
 def api_debug(request):
+    '''
+    接口返回值，返回到页面
+    :param request:
+    :return:
+    '''
     if request.method == "POST":
         url = request.POST.get("req_url")
         method = request.POST.get("req_method")
@@ -120,6 +125,9 @@ def save_case(request):
 
 
 def search_case_name(request):
+    """
+    搜索用例
+    """
     if request.method == "GET":
         case_name = request.GET.get('case_name', "")
         cases = TestCase.objects.filter(name__contains=case_name)
@@ -144,3 +152,18 @@ def search_case_name(request):
         return HttpResponse("404")
 
 
+def case_debug(request, cid):
+    '''
+    调试接口
+    :param request:
+    :param cid: 用例id
+    :return:
+    '''
+    if request.method == "GET":
+        form = TestCaseForms()
+        return render(request, "case_debug.html", {
+            "form": form,
+            "type": "debug"
+        })
+    else:
+        return HttpResponse("404")

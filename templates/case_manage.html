@@ -47,7 +47,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h3 class="sub-header">用例列表
                 <button type="button" class="btn btn-success" style="float: right;"
-                onclick="window.location.href='/interface/debug/'">调试</button>
+                onclick="window.location.href='/interface/case_add/'">创建</button>
             </h3>
 
             <div class="table-responsive">
@@ -78,8 +78,8 @@
                   <td>{{case.req_method}}</td>
                   <td>{{case.create_time | date:"Y-m-d H:i:s" }}</td>
                   <td>
-                    <a href="/manage/project_edit/{{project.id}}/">编辑</a>
-                    <a href="/manage/project_delete/{{project.id}}/">删除</a>
+                    <a href="/interface/case_debug/{{case.id}}/">调试</a>
+                    <a href="/manage/project_delete/{{case.id}}/">删除</a>
                   </td>
                 </tr>
               {% endfor %}
@@ -115,8 +115,8 @@
 
     {% endif %}
 
-    <!-- 调试页面 -->
-    {% if type == 'debug'%}
+    <!-- 创建用例页面 -->
+    {% if type == 'add'%}
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="row">
                 {% block api_debug %}
@@ -125,6 +125,18 @@
             </div>
         </div>
     {% endif %}
+
+    <!-- 调试用例页面 -->
+    {% if type == 'debug'%}
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="row">
+                {% block case_debug %}
+
+                {% endblock %}
+            </div>
+        </div>
+    {% endif %}
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
