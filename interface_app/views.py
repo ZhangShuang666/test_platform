@@ -125,9 +125,11 @@ def save_case(request):
 
 
 def search_case_name(request):
-    """
+    '''
     搜索用例
-    """
+    :param request:
+    :return:
+    '''
     if request.method == "GET":
         case_name = request.GET.get('case_name', "")
         cases = TestCase.objects.filter(name__contains=case_name)
@@ -167,3 +169,31 @@ def case_debug(request, cid):
         })
     else:
         return HttpResponse("404")
+
+
+def get_case_info(request):
+    '''
+    获取接口数据
+    :param request:
+    :return:
+    '''
+    if request.method == "POST":
+        case_id = request.POST.get("caseId", "")
+        if case_id == "":
+            return HttpResponse("404")
+        else:
+            case_obj = TestCase.objects.get(pk = case_id)
+            #case_mod = Module.object.get(id=case_obj.module_id)
+            case_info = {
+                "name": case_obj.name,
+                "url": case_obj.url,
+                "reqMethod": case_obj.req_method,
+                "reqType": case_obj.req_type,
+                "reqHeader": case_obj.req_header,
+                "reqParameter": case_obj.req_parameter,
+            }
+            return JsonResponse({
+                "success": "true",
+                "data": case_info
+                                })
+

@@ -9,4 +9,5 @@ urlpatterns = [
     path('get_porject_list', views.get_porject_list),
     path('search_case_name/', views.search_case_name),
     path('case_debug/<int:cid>/', views.case_debug),
+    path('get_case_info/', views.get_case_info),
 ]

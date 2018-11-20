@@ -5,7 +5,7 @@ var ProjectInit = function (_cmbProject, _cmbModule) {
 
     //创建下拉选项
     function cmbAddOption(cmb, str, obj) {
-        console.log(str);
+        //console.log(str);
         var option = document.createElement("option");
         cmb.options.add(option);
         option.innerHTML = str;
