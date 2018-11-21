@@ -56,6 +56,7 @@ def save_case(request):
         req_type = request.POST.get("req_type", "")
         header = request.POST.get("header", "")
         module_name = request.POST.get("module", "")
+        reponses_assert = request.POST.get("reponses_assert", "")
         print("模块名字", module_name)
 
         if url == "" or method == "" or req_type == "" or module_name == "":
@@ -72,7 +73,8 @@ def save_case(request):
         case = TestCase.objects.create(name=case_name, module=module_obj, url=url,
                                        req_method=method, req_header=header,
                                        req_type=req_type,
-                                       req_parameter=parameter)
+                                       req_parameter=parameter,
+                                       reponses_assert=reponses_assert)
         if case is not None:
             return HttpResponse("保存成功！")
 

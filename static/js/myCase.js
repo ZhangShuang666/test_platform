@@ -1,9 +1,5 @@
-
 // 获取指定case_id的用例信息
 var CaseInit = function (case_id) {
-    
-    //window.alert("abc")
-    //document.write("<script language=javascript src='./jsProject.js'><\/script>");
 
     function getCaseInfo() {
         // 获取某个用例的信息
@@ -17,7 +13,7 @@ var CaseInit = function (case_id) {
                 document.getElementById("req_url").value = result.url;
                 document.getElementById("req_header").value = result.reqHeader;
                 document.getElementById("req_parameter").value = result.reqParameter;
-                //document.getElementById("assert_text").value = result.assertText;
+                document.getElementById("assert").value = result.reponses_assert;
 
                 if (result.reqMethod === "post"){
                     document.getElementById("post").setAttribute("checked", "")

@@ -79,6 +79,7 @@ def get_case_info(request):
                 "reqType": case_obj.req_type,
                 "reqHeader": case_obj.req_header,
                 "reqParameter": case_obj.req_parameter,
+                "reponses_assert": case_obj.reponses_assert
             }
             return JsonResponse({
                 "success": "true",
