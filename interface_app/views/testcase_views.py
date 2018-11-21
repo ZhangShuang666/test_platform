@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from interface_app.models import TestCase
 from interface_app.forms import TestCaseForms
 from projects_app.models import Module
@@ -54,7 +54,7 @@ def search_case_name(request):
         case_name = request.GET.get('case_name', "")
         cases = TestCase.objects.filter(name__contains=case_name)
 
-        paginator = Paginator(cases, 2)
+        paginator = Paginator(cases, 10)
         page = request.GET.get('page')
         try:
             contacts = paginator.page(page)
@@ -89,3 +89,14 @@ def case_debug(request, cid):
         })
     else:
         return HttpResponse("404")
+
+
+def case_delete(request, cid):
+    '''
+    删除用例
+    :param request:
+    :param cid:
+    :return:
+    '''
+    TestCase.objects.filter(id=cid).delete()
+    return HttpResponseRedirect("/interface/case_manage/", {"type": "list"})
