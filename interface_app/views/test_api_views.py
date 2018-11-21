@@ -21,7 +21,6 @@ def save_case(request):
         header = request.POST.get("header", "")
         module_name = request.POST.get("module", "")
         reponses_assert = request.POST.get("reponses_assert", "")
-        print("模块名字", module_name)
 
         if url == "" or method == "" or req_type == "" or module_name == "":
             return HttpResponse("必传参数为空")
@@ -96,7 +95,7 @@ def get_project_list(request):
 
 def get_case_info(request):
     '''
-    获取接口数据
+    编辑用例时，获取接口数据
     :param request:
     :return:
     '''
@@ -111,8 +110,6 @@ def get_case_info(request):
 
             project_obj = Project.objects.get(pk=module_obj.project_id)
             project_name = project_obj.name
-
-            print(project_name, module_name)
 
             case_info = {
                 "ProjectName": project_name,
@@ -186,7 +183,6 @@ def save_debug_case(request):
         header = request.POST.get("header", "")
         module_name = request.POST.get("module", "")
         reponses_assert = request.POST.get("reponses_assert", "")
-        print("模块名字", module_name)
 
         if url == "" or method == "" or req_type == "" or module_name == "":
             return HttpResponse("必传参数为空")

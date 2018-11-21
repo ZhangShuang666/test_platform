@@ -9,6 +9,11 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 @login_required
 def case_manage(request):
+    '''
+    显示用例列表
+    :param request:
+    :return:
+    '''
     testcases = TestCase.objects.all()
     paginator = Paginator(testcases, 10)
 
@@ -32,8 +37,12 @@ def case_manage(request):
 
 
 @login_required
-# 创建接口
 def case_add(request):
+    '''
+    创建用例
+    :param request:
+    :return:
+    '''
     if request.method == "GET":
         form = TestCaseForms()
         return render(request, "case_add.html", {
@@ -76,7 +85,7 @@ def search_case_name(request):
 
 def case_debug(request, cid):
     '''
-    调试接口
+    调试用例
     :param request:
     :param cid: 用例id
     :return:
@@ -95,7 +104,7 @@ def case_delete(request, cid):
     '''
     删除用例
     :param request:
-    :param cid:
+    :param cid:用例的id
     :return:
     '''
     TestCase.objects.filter(id=cid).delete()

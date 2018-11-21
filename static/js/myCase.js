@@ -8,7 +8,7 @@ var CaseInit = function (case_id) {
         }, function (resp) {
             if (resp.success === "true") {
                 let result = resp.data;
-                console.log("结果", result);
+                //console.log("结果", result);
                 document.getElementById("req_name").value = result.name;
                 document.getElementById("req_url").value = result.url;
                 document.getElementById("req_header").value = result.reqHeader;
