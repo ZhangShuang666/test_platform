@@ -6,6 +6,46 @@ from interface_app.models import TestCase
 from projects_app.models import Project, Module
 
 
+def save_case(request):
+    '''
+    保存测试用例
+    :param request:
+    :return:
+    '''
+    if request.method == "POST":
+        case_name = request.POST.get("name", "")
+        url = request.POST.get("req_url", "")
+        method = request.POST.get("req_method", "")
+        parameter = request.POST.get("req_parameter", "")
+        req_type = request.POST.get("req_type", "")
+        header = request.POST.get("header", "")
+        module_name = request.POST.get("module", "")
+        reponses_assert = request.POST.get("reponses_assert", "")
+        print("模块名字", module_name)
+
+        if url == "" or method == "" or req_type == "" or module_name == "":
+            return HttpResponse("必传参数为空")
+
+        if parameter == "":
+            parameter = "{}"
+
+        if header == "":
+            header = "{}"
+
+        module_obj = Module.objects.get(name=module_name)
+
+        case = TestCase.objects.create(name=case_name, module=module_obj, url=url,
+                                       req_method=method, req_header=header,
+                                       req_type=req_type,
+                                       req_parameter=parameter,
+                                       reponses_assert=reponses_assert)
+        if case is not None:
+            return HttpResponse("保存成功！")
+
+    else:
+        return HttpResponse("404")
+
+
 @login_required
 def api_debug(request):
     '''
@@ -30,8 +70,12 @@ def api_debug(request):
         return HttpResponse(r.text)
 
 
-# 获取项目模块列表
 def get_project_list(request):
+    '''
+    获取项目模块列表
+    :param request:
+    :return:
+    '''
     project_list = Project.objects.all()
     dataList = []
     for project in project_list:
@@ -124,3 +168,45 @@ def api_assert(request):
             "success": "false",
             "message": "请求方法错误"
         })
+
+
+def save_debug_case(request):
+    '''
+    修改用例页面，保存用例
+    :param request:
+    :return:
+    '''
+    if request.method == "POST":
+        case_id = request.POST.get("case_id", "")
+        case_name = request.POST.get("name", "")
+        url = request.POST.get("req_url", "")
+        method = request.POST.get("req_method", "")
+        parameter = request.POST.get("req_parameter", "")
+        req_type = request.POST.get("req_type", "")
+        header = request.POST.get("header", "")
+        module_name = request.POST.get("module", "")
+        reponses_assert = request.POST.get("reponses_assert", "")
+        print("模块名字", module_name)
+
+        if url == "" or method == "" or req_type == "" or module_name == "":
+            return HttpResponse("必传参数为空")
+
+        if parameter == "":
+            parameter = "{}"
+
+        if header == "":
+            header = "{}"
+
+        module_obj = Module.objects.get(name=module_name)
+
+        case = TestCase.objects.filter(id=case_id).update(name=case_name, module=module_obj, url=url,
+                                       req_method=method, req_header=header,
+                                       req_type=req_type,
+                                       req_parameter=parameter,
+                                       reponses_assert=reponses_assert)
+        if case is not None:
+            return HttpResponse("保存成功！")
+
+    else:
+        return HttpResponse("404")
+

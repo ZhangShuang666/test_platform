@@ -44,44 +44,6 @@ def case_add(request):
         return HttpResponse("404")
 
 
-def save_case(request):
-    """
-    保存测试用例
-    """
-    if request.method == "POST":
-        case_name = request.POST.get("name", "")
-        url = request.POST.get("req_url", "")
-        method = request.POST.get("req_method", "")
-        parameter = request.POST.get("req_parameter", "")
-        req_type = request.POST.get("req_type", "")
-        header = request.POST.get("header", "")
-        module_name = request.POST.get("module", "")
-        reponses_assert = request.POST.get("reponses_assert", "")
-        print("模块名字", module_name)
-
-        if url == "" or method == "" or req_type == "" or module_name == "":
-            return HttpResponse("必传参数为空")
-
-        if parameter == "":
-            parameter = "{}"
-
-        if header == "":
-            header = "{}"
-
-        module_obj = Module.objects.get(name=module_name)
-
-        case = TestCase.objects.create(name=case_name, module=module_obj, url=url,
-                                       req_method=method, req_header=header,
-                                       req_type=req_type,
-                                       req_parameter=parameter,
-                                       reponses_assert=reponses_assert)
-        if case is not None:
-            return HttpResponse("保存成功！")
-
-    else:
-        return HttpResponse("404")
-
-
 def search_case_name(request):
     '''
     搜索用例
