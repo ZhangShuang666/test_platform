@@ -4,14 +4,15 @@ import json
 import requests
 from interface_app.models import TestCase
 from projects_app.models import Project, Module
+from common.return_JsonResult import response_false, response_success
 
 
 def save_case(request):
-    '''
+    """
     保存测试用例
     :param request:
     :return:
-    '''
+    """
     if request.method == "POST":
         case_name = request.POST.get("name", "")
         url = request.POST.get("req_url", "")
@@ -47,11 +48,11 @@ def save_case(request):
 
 @login_required
 def api_debug(request):
-    '''
+    """
     接口返回值，返回到页面
     :param request:
     :return:
-    '''
+    """
     if request.method == "POST":
         url = request.POST.get("req_url")
         method = request.POST.get("req_method")
@@ -70,11 +71,11 @@ def api_debug(request):
 
 
 def get_project_list(request):
-    '''
+    """
     获取项目模块列表
     :param request:
     :return:
-    '''
+    """
     project_list = Project.objects.all()
     dataList = []
     for project in project_list:
@@ -90,15 +91,15 @@ def get_project_list(request):
             project_dict["moduleList"] = module_name
             dataList.append(project_dict)
 
-    return JsonResponse({"success": "true", "data": dataList})
+    return response_success(data=dataList)
 
 
 def get_case_info(request):
-    '''
+    """
     编辑用例时，获取接口数据
     :param request:
     :return:
-    '''
+    """
     if request.method == "POST":
         case_id = request.POST.get("caseId", "")
         if case_id == "":
@@ -122,10 +123,7 @@ def get_case_info(request):
                 "reqParameter": case_obj.req_parameter,
                 "reponses_assert": case_obj.reponses_assert
             }
-            return JsonResponse({
-                "success": "true",
-                "data": case_info
-            })
+            return response_success(data=case_info)
 
 
 def api_assert(request):
@@ -139,40 +137,24 @@ def api_assert(request):
         assert_text = request.POST.get("assert_text", "")
 
         if result_text == "" or assert_text == "":
-            return JsonResponse(
-                {
-                    "success": "false",
-                    "message": "null"
-                }
-            )
+            return response_false("结果或者接口验证不能为空")
 
         try:
             assert assert_text in result_text
         except AssertionError:
-            return JsonResponse({
-                "success": "false",
-                "message": "验证失败"
-            })
+            return response_false("验证失败")
         else:
-            return JsonResponse(
-                {
-                    "success": "true",
-                    "message": "验证成功"
-                }
-            )
+            return response_success()
     else:
-        return JsonResponse({
-            "success": "false",
-            "message": "请求方法错误"
-        })
+        return response_false(message="请求方法错误")
 
 
 def save_debug_case(request):
-    '''
+    """
     修改用例页面，保存用例
     :param request:
     :return:
-    '''
+    """
     if request.method == "POST":
         case_id = request.POST.get("case_id", "")
         case_name = request.POST.get("name", "")

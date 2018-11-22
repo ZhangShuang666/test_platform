@@ -1,6 +1,7 @@
 from django.urls import path
 from interface_app.views import test_api_views, testcase_views
 
+
 urlpatterns = [
     # 用例
     path('case_manage/', testcase_views.case_manage),
@@ -18,3 +19,4 @@ urlpatterns = [
     path('api_assert/', test_api_views.api_assert),
     path('save_debug_case/', test_api_views.save_debug_case),
 ]
+

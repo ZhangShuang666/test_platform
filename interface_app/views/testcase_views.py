@@ -14,7 +14,7 @@ def case_manage(request):
     :param request:
     :return:
     '''
-    testcases = TestCase.objects.all()
+    testcases = TestCase.objects.all().order_by('create_time')
     paginator = Paginator(testcases, 10)
 
     page = request.GET.get('page')
@@ -61,7 +61,7 @@ def search_case_name(request):
     '''
     if request.method == "GET":
         case_name = request.GET.get('case_name', "")
-        cases = TestCase.objects.filter(name__contains=case_name)
+        cases = TestCase.objects.filter(name__contains=case_name).order_by('create_time')
 
         paginator = Paginator(cases, 10)
         page = request.GET.get('page')
