@@ -1,0 +1,36 @@
+{% extends "task_manage.html" %}
+{% block task_add %}
+
+    <fieldset>
+        <div id="legend" class="">
+            <legend class="">创建任务</legend>
+        </div>
+
+        <div style="width:80%; margin-left: 20px;">
+        <form action="/debug/" method="get" class="bs-example bs-example-form" role="form" style="margin-top: 30px">
+
+
+
+            <div class="input-group">
+                <span class="input-group-addon">名称</span>
+                <input id="req_name" type="text" class="form-control" placeholder="name">
+            </div>
+            <br>
+
+            <div style="width:80%; margin-left: 20px;">
+            <p>描述：</p>
+            <textarea id="description" class="form-control" rows="2" name=textarea></textarea>
+            </div>
+
+
+        </form>
+
+        </div>
+
+
+    </fieldset>
+
+
+
+
+{% endblock %}
