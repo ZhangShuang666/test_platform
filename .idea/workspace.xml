@@ -4,12 +4,9 @@
     <list default="true" id="84952e57-9155-4f18-8f80-96fdf2bdb766" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/case_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/case_manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/module_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/module_manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project_manage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/myCase.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/myCase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/task_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task_add.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,43 +18,45 @@
     <session id="-546692980">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.4" value="4" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="9" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="html" value="405" />
-          <entry key="js" value="70" />
-          <entry key="py" value="2953" />
+          <entry key="html" value="460" />
+          <entry key="js" value="127" />
+          <entry key="py" value="3550" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="405" />
-          <entry key="JavaScript" value="70" />
+          <entry key="HTML" value="460" />
+          <entry key="JavaScript" value="127" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="2953" />
+          <entry key="Python" value="3550" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
-          <entry key="html" value="39" />
-          <entry key="js" value="11" />
-          <entry key="py" value="79" />
+          <entry key="html" value="42" />
+          <entry key="js" value="12" />
+          <entry key="py" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="39" />
-          <entry key="JavaScript" value="11" />
-          <entry key="Python" value="79" />
+          <entry key="HTML" value="42" />
+          <entry key="JavaScript" value="12" />
+          <entry key="Python" value="87" />
         </counts>
       </usages-collector>
     </session>
@@ -65,22 +64,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_app/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface_app/views/task_views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="555">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -89,10 +76,78 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface_app/views/task_api_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+              <folding>
+                <element signature="e#1#52#0" expanded="true" />
+                <marker date="1544421180819" expanded="true" signature="261:266" ph="..." />
+                <marker date="1544421180819" expanded="true" signature="1053:1590" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/views/test_api_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/myCase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/task_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="316">
+              <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#fieldset#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/case_add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="129" column="15" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="129" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,23 +207,23 @@
         <option value="$PROJECT_DIR$/static/js/jsProject.js" />
         <option value="$PROJECT_DIR$/interface_app/views.py" />
         <option value="$PROJECT_DIR$/templates/case_add.html" />
-        <option value="$PROJECT_DIR$/static/js/myCase.js" />
         <option value="$PROJECT_DIR$/templates/case_debug.html" />
         <option value="$PROJECT_DIR$/interface_app/views/testcase_views.py" />
         <option value="$PROJECT_DIR$/common/return_result.py" />
         <option value="$PROJECT_DIR$/projects_app/models.py" />
         <option value="$PROJECT_DIR$/interface_app/views/test_api_views.py" />
         <option value="$PROJECT_DIR$/interface_app/tests/test_unit.py" />
-        <option value="$PROJECT_DIR$/interface_app/views/task_api_views.py" />
         <option value="$PROJECT_DIR$/templates/case_manage.html" />
         <option value="$PROJECT_DIR$/templates/module_manage.html" />
         <option value="$PROJECT_DIR$/templates/project_manage.html" />
         <option value="$PROJECT_DIR$/interface_app/models.py" />
         <option value="$PROJECT_DIR$/interface_app/admin.py" />
         <option value="$PROJECT_DIR$/interface_app/views/task_views.py" />
-        <option value="$PROJECT_DIR$/interface_app/urls.py" />
         <option value="$PROJECT_DIR$/templates/task_manage.html" />
+        <option value="$PROJECT_DIR$/static/js/myCase.js" />
+        <option value="$PROJECT_DIR$/interface_app/urls.py" />
         <option value="$PROJECT_DIR$/templates/task_add.html" />
+        <option value="$PROJECT_DIR$/interface_app/views/task_api_views.py" />
       </list>
     </option>
   </component>
@@ -211,6 +266,11 @@
             <path>
               <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="test_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_platform" type="462c0819:PsiDirectoryNode" />
               <item name="interface_app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -234,7 +294,13 @@
             <path>
               <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="test_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="projects_app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
@@ -307,7 +373,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2819277" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -351,9 +417,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_app/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -497,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/myCase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_platform/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -594,16 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/test_api_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/module_manage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -636,19 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -659,10 +692,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/task_manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="117" column="15" lean-forward="true" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/views/testcase_views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="39" selection-start-line="39" selection-end-line="52" selection-end-column="34" />
+        <state relative-caret-position="840">
+          <caret line="62" column="52" lean-forward="true" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/task_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -671,42 +718,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/case_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="125" column="36" lean-forward="true" selection-end-line="175" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/task_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/task_manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="117" column="15" lean-forward="true" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
+        <state relative-caret-position="486">
+          <caret line="129" column="15" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="129" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state relative-caret-position="405">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/task_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="316">
+          <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#fieldset#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/test_api_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/myCase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/task_api_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="e#1#52#0" expanded="true" />
+            <marker date="1544421180819" expanded="true" signature="261:266" ph="..." />
+            <marker date="1544421180819" expanded="true" signature="1053:1590" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
